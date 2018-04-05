@@ -1,5 +1,5 @@
 /**
- * Seller.js
+ * Sale.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,33 +13,35 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    name: {
-      type: 'string',
-      required: true,
-    },
-
-    phone: {
-      type: 'number',
-      required: true,
-    },
-
-    documentation: {
-      type: 'number',
-    },
-
-    email: {
+    description: {
       type: 'string',
     },
 
-    address: {
-      type: 'string',
+    dateStart: {
+      type: 'ref',
+      required: true,
     },
 
-    balance: {
-      type: 'number',
+    dateEnd: {
+      type: 'ref',
       required: true,
+    },
+
+    valueTotal: {
+      type: 'number',
       columnType: 'FLOAT',
       defaultsTo: 0,
+    },
+
+    valueReceived: { type: 'number',
+      columnType: 'FLOAT',
+      defaultsTo: 0,
+    },
+
+    isClosed: {
+      type: 'boolean',
+      required: true,
+      defaultsTo: false,
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -51,9 +53,8 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    sales: {
-      collection: 'sale',
-      via: 'seller',
+    seller: {
+      model: 'seller',
     },
 
   },

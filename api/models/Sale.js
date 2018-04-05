@@ -20,13 +20,13 @@ module.exports = {
     dateStart: {
       type: 'ref',
       required: true,
-      columnType: 'datetime',
+      columnType: 'timestamp',
     },
 
     dateEnd: {
       type: 'ref',
       required: true,
-      columnType: 'datetime',
+      columnType: 'timestamp',
     },
 
     valueTotal: {
@@ -43,7 +43,6 @@ module.exports = {
 
     isClosed: {
       type: 'boolean',
-      required: true,
       defaultsTo: false,
     },
 

@@ -37,7 +37,6 @@ module.exports = {
 
     balance: {
       type: 'number',
-      required: true,
       columnType: 'FLOAT',
       defaultsTo: 0,
     },

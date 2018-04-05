@@ -1,5 +1,5 @@
 /**
- * Product.js
+ * Seller.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -18,26 +18,28 @@ module.exports = {
       required: true,
     },
 
-    code: {
-      type: 'string',
-    },
-
-    price: {
+    phone: {
       type: 'number',
       required: true,
+    },
+
+    documentation: {
+      type: 'number',
+    },
+
+    email: {
+      type: 'string',
+    },
+
+    address: {
+      type: 'string',
+    },
+
+    balance: {
+      type: 'number',
+      required: true,
+      defaultsTo: 0,
       columnType: 'FLOAT',
-    },
-
-    description: {
-      type: 'string',
-    },
-
-    color: {
-      type: 'string',
-    },
-
-    size: {
-      type: 'string',
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

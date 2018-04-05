@@ -20,11 +20,13 @@ module.exports = {
     dateStart: {
       type: 'ref',
       required: true,
+      columnType: 'datetime',
     },
 
     dateEnd: {
       type: 'ref',
       required: true,
+      columnType: 'datetime',
     },
 
     valueTotal: {
@@ -33,7 +35,8 @@ module.exports = {
       defaultsTo: 0,
     },
 
-    valueReceived: { type: 'number',
+    valueReceived: {
+      type: 'number',
       columnType: 'FLOAT',
       defaultsTo: 0,
     },
